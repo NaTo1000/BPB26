@@ -6,11 +6,11 @@ import sys
 import json
 from typing import Optional
 
-from ..compliance.engine import ComplianceEngine
-from ..ai.analyzer import AIAnalyzer
-from ..regulations.database import RegulationDatabase
-from ..projects.manager import ProjectManager
-from ..models import ComplianceStatus
+from bpb26.compliance.engine import ComplianceEngine
+from bpb26.ai.analyzer import AIAnalyzer
+from bpb26.regulations.database import RegulationDatabase
+from bpb26.projects.manager import ProjectManager
+from bpb26.models import ComplianceStatus
 
 
 class CLI:

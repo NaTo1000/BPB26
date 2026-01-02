@@ -14,7 +14,8 @@ import uuid
 from ..models import (
     BuildingProject,
     ComplianceStatus,
-    ComplianceViolation
+    ComplianceViolation,
+    ViolationSeverity
 )
 
 
@@ -177,7 +178,6 @@ class ProjectManager:
             return
 
         # Check for critical violations
-        from ..models import ViolationSeverity
         has_critical = any(
             v.severity == ViolationSeverity.CRITICAL 
             for v in project.violations
@@ -226,8 +226,6 @@ class ProjectManager:
         project = self.projects.get(project_id)
         if not project:
             return None
-
-        from ..models import ViolationSeverity
         
         # Count violations by severity
         violation_counts = {

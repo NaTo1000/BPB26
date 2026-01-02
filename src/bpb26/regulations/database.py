@@ -167,7 +167,7 @@ class RegulationDatabase:
 
         for regulation in self.regulations.values():
             # Check jurisdiction match (include "International" as applicable to all)
-            if regulation.jurisdiction != "International" and \
+            if regulation.jurisdiction.lower() != "international" and \
                regulation.jurisdiction.lower() not in jurisdiction.lower():
                 continue
 

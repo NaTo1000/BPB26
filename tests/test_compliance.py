@@ -38,7 +38,7 @@ def test_check_compliance_no_violations():
     assert report is not None
     assert report.project_id == project.id
     assert report.compliance_score >= 0
-    assert report.overall_status in [status for status in ComplianceStatus]
+    assert report.overall_status in ComplianceStatus
 
 
 def test_check_compliance_with_violations():
